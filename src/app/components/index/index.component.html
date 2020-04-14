@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <h4 class="title heading pad"><strong>Party Members</strong> <span></span></h4>
+          </div>
+          <div class="content table-responsive table-full-width">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th *ngFor="let cell of headerRow">{{ cell }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let member of members | paginate: { itemsPerPage: 3, currentPage: p, totalItems: total}">
+                  <td>{{member._id}}</td>
+                  <td>{{member.name}}</td>
+                  <td>{{member.contact}}</td>
+                  <td>{{member.email}}</td>
+                  <td>{{member.address}}</td>
+                  <td>{{member.about_member}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

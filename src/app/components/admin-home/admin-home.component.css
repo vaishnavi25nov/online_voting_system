@@ -1,0 +1,20 @@
+.pad {
+    padding-left: 10px;
+    margin-top: 10px;
+}
+a{
+    color: wheat;
+}
+
+.pad{
+    margin-top: 2%;
+}
+
+.pull-left{
+    padding-right: 100%;
+}
+
+.search{
+    border: 1px solid #ccc;
+    margin-left: 600px;
+}
